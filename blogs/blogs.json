@@ -1,0 +1,31 @@
+{
+  "provider": "pagbank",
+  "url": "https://developer.pagbank.com.br/changelog",
+  "fetched": "2026-06-13",
+  "entries": [
+    {
+      "title": "Chegou o Portal do Desenvolvedor!",
+      "date": "2022-01-01",
+      "url": "https://developer.pagbank.com.br/changelog/chegou-o-portal-do-desenvolvedor",
+      "summary": "Launch announcement of the new Developer Portal, introducing an updated platform for PagBank developers with improved documentation and tooling."
+    },
+    {
+      "title": "PagSeguro Developer com menu novo",
+      "date": "2020-09-01",
+      "url": "https://developer.pagbank.com.br/changelog/pagseguro-developer-com-menu-novo",
+      "summary": "The developer platform received a refreshed menu interface to improve navigation and user experience across the documentation portal."
+    },
+    {
+      "title": "PagSeguro Developer de cara nova",
+      "date": "2020-06-01",
+      "url": "https://developer.pagbank.com.br/changelog/pagseguro-developer-de-cara-nova",
+      "summary": "Major visual redesign of the PagSeguro Developer portal with an updated appearance and layout for a more modern developer experience."
+    },
+    {
+      "title": "Status Page",
+      "date": "2020-06-01",
+      "url": "https://developer.pagbank.com.br/changelog/status-page",
+      "summary": "Introduction of a dedicated Status Page where users can monitor PagBank service availability and incident history in real time."
+    }
+  ]
+}

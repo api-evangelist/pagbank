@@ -1,0 +1,135 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://pagbank.com.br/",
+  "name": "PagBank",
+  "alternateName": "PagSeguro",
+  "description": "PagBank (formerly PagSeguro) is a Brazilian digital bank and payment platform operated by PagoSeguro Internet Instituição de Pagamento S/A, a subsidiary of Universo Online (UOL). It provides REST APIs for Pix instant transfers, credit and debit card processing, e-commerce checkout, boleto bancário, recurring payments, POS terminal integration, and financial account management.",
+  "url": "https://pagbank.com.br/",
+  "logo": "https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg",
+  "sameAs": [
+    "https://twitter.com/PagBank",
+    "https://www.linkedin.com/company/pagbank",
+    "https://github.com/pagseguro/"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "developer support",
+    "url": "https://developer.pagbank.com.br/docs/apis-pagbank"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "PagBank API Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "PagBank Orders API",
+          "description": "Manages purchase orders and payment processing across multiple payment methods including credit card, debit 3DS, boleto, and PIX. Supports post-authorization capture, card tokenization, payment splitting, cancellations, and refunds.",
+          "url": "https://developer.pagbank.com.br/reference/introducao",
+          "category": [
+            "Orders",
+            "Payments",
+            "Credit Card",
+            "PIX",
+            "Boleto"
+          ]
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "PagBank PIX API",
+          "description": "Dedicated API for PIX instant payment infrastructure in Brazil. Supports immediate charge creation via QR codes, payment receipt confirmation, and real-time notifications for PIX transactions.",
+          "url": "https://developer.pagbank.com.br/reference/introducao",
+          "category": [
+            "PIX",
+            "Instant Payments",
+            "QR Code"
+          ]
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "PagBank Connect API",
+          "description": "OAuth 2.0 authorization API enabling platform integrations (SaaS and marketplace models) to connect applications with third-party PagBank user accounts for delegated payment processing actions.",
+          "url": "https://developer.pagbank.com.br/docs/apis-pagbank",
+          "category": [
+            "OAuth",
+            "Platform",
+            "Marketplace",
+            "Authorization"
+          ]
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "PagBank Recurring Payments API",
+          "description": "Subscription billing API for managing recurring charges. Handles subscription creation, billing cycles, payment method updates, and recurring payment indicators for installment plans.",
+          "url": "https://developer.pagbank.com.br/docs/apis-pagbank",
+          "category": [
+            "Recurring Payments",
+            "Subscriptions",
+            "Billing"
+          ]
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "PagBank Checkout API",
+          "description": "Hosted checkout solution that redirects customers to a PagBank-managed payment page. Simplifies PCI compliance for merchants by offloading card data handling to PagBank infrastructure.",
+          "url": "https://developer.pagbank.com.br/docs/checkout",
+          "category": [
+            "Checkout",
+            "Hosted Payment",
+            "E-Commerce"
+          ]
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "PagBank Account Registration API",
+          "description": "Enables platform partners to create and manage third-party PagBank accounts programmatically. Used by marketplace and SaaS platforms to onboard sellers and sub-merchants.",
+          "url": "https://developer.pagbank.com.br/docs/apis-pagbank",
+          "category": [
+            "Account Management",
+            "Registration",
+            "Onboarding"
+          ]
+        }
+      }
+    ]
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brazil"
+  },
+  "foundingDate": "2006",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": 29500000,
+    "unitText": "customers"
+  },
+  "knowsAbout": [
+    "Payment Processing",
+    "Digital Banking",
+    "PIX Instant Payments",
+    "Boleto Bancário",
+    "E-Commerce",
+    "POS Terminal Integration",
+    "Recurring Payments",
+    "Card Tokenization",
+    "OAuth 2.0",
+    "Marketplace Payments"
+  ]
+}
