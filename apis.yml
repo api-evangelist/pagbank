@@ -1,0 +1,120 @@
+aid: pagbank
+name: PagBank
+description: PagBank (formerly PagSeguro) is a Brazilian digital bank and payment platform operated by PagoSeguro Internet Instituição de Pagamento S/A, a subsidiary of Universo Online (UOL). It provides REST APIs for Pix instant transfers, credit and debit card processing, e-commerce checkout, boleto bancário, recurring payments, POS terminal integration, and financial account management. PagBank serves e-commerce merchants, SaaS platforms, and marketplaces across Brazil and supports over 29.5 million customers.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/pagbank/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Payments
+  - Digital Banking
+  - Brazil
+  - PIX
+  - Fintech
+  - E-Commerce
+  - POS
+  - Recurring Payments
+  - Boleto
+apis:
+  - name: PagBank Orders API
+    description: Manages purchase orders and payment processing across multiple payment methods including credit card, debit 3DS, boleto, and PIX. Supports post-authorization capture, card tokenization, payment splitting, cancellations, and refunds.
+    humanURL: https://developer.pagbank.com.br/reference/introducao
+    baseURL: https://api.pagseguro.com
+    tags:
+      - Orders
+      - Payments
+      - Credit Card
+      - PIX
+      - Boleto
+    properties:
+      - type: Documentation
+        url: https://developer.pagbank.com.br/docs/apis-pagbank
+      - type: OpenAPI
+        url: https://developer.pagbank.com.br/reference/introducao
+  - name: PagBank PIX API
+    description: Dedicated API for PIX instant payment infrastructure in Brazil. Supports immediate charge creation via QR codes, payment receipt confirmation, and real-time notifications for PIX transactions.
+    humanURL: https://developer.pagbank.com.br/reference/introducao
+    baseURL: https://api.pagseguro.com
+    tags:
+      - PIX
+      - Instant Payments
+      - QR Code
+    properties:
+      - type: Documentation
+        url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - name: PagBank Connect API
+    description: OAuth 2.0 authorization API enabling platform integrations (SaaS and marketplace models) to connect applications with third-party PagBank user accounts for delegated payment processing actions.
+    humanURL: https://developer.pagbank.com.br/docs/apis-pagbank
+    baseURL: https://api.pagseguro.com
+    tags:
+      - OAuth
+      - Platform
+      - Marketplace
+      - Authorization
+    properties:
+      - type: Documentation
+        url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - name: PagBank Recurring Payments API
+    description: Subscription billing API for managing recurring charges. Handles subscription creation, billing cycles, payment method updates, and recurring payment indicators for installment plans.
+    humanURL: https://developer.pagbank.com.br/docs/apis-pagbank
+    baseURL: https://api.pagseguro.com
+    tags:
+      - Recurring Payments
+      - Subscriptions
+      - Billing
+    properties:
+      - type: Documentation
+        url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - name: PagBank Checkout API
+    description: Hosted checkout solution that redirects customers to a PagBank-managed payment page. Simplifies PCI compliance for merchants by offloading card data handling to PagBank infrastructure.
+    humanURL: https://developer.pagbank.com.br/docs/checkout
+    baseURL: https://api.pagseguro.com
+    tags:
+      - Checkout
+      - Hosted Payment
+      - E-Commerce
+    properties:
+      - type: Documentation
+        url: https://developer.pagbank.com.br/docs/checkout
+  - name: PagBank Account Registration API
+    description: Enables platform partners to create and manage third-party PagBank accounts programmatically. Used by marketplace and SaaS platforms to onboard sellers and sub-merchants.
+    humanURL: https://developer.pagbank.com.br/docs/apis-pagbank
+    baseURL: https://api.pagseguro.com
+    tags:
+      - Account Management
+      - Registration
+      - Onboarding
+    properties:
+      - type: Documentation
+        url: https://developer.pagbank.com.br/docs/apis-pagbank
+common:
+  - type: Website
+    url: https://pagbank.com.br/
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: GettingStarted
+    url: https://developer.pagbank.com.br/docs/primeiros-passos
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: GitHubOrg
+    url: https://github.com/pagseguro/
+  - type: Blog
+    url: https://developer.pagbank.com.br/changelog
+  - type: Pricing
+    url: https://pagbank.com.br/
+  - type: StatusPage
+    url: https://status.pagbank.com.br/
+  - type: X
+    url: https://twitter.com/PagBank
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/pagbank
+  - type: Plans
+    url: plans/pagbank-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/pagbank-rate-limits.yml
+  - type: FinOps
+    url: finops/pagbank-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

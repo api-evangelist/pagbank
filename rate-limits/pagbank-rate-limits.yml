@@ -1,0 +1,44 @@
+name: PagBank API Rate Limits
+description: PagBank does not publicly document specific numeric rate limits in its developer documentation. The platform uses token-based authentication with idempotency keys to prevent duplicate request processing. Rate limiting details are communicated during the commercial onboarding and homologation process.
+url: https://developer.pagbank.com.br/
+
+general:
+  - Standard HTTP status codes are used to signal API errors and rate conditions
+  - Idempotency keys are required on mutating requests to prevent duplicate operations
+  - Sandbox environment may have lower thresholds than production
+
+authentication:
+  type: Bearer token
+  notes:
+    - Authentication tokens are scoped per integration
+    - Public keys are issued for client-side card encryption
+    - mTLS digital certificates are available as an additional security layer
+    - Connect API uses OAuth 2.0 authorization flow for platform integrations
+
+environments:
+  sandbox:
+    base_url: https://sandbox.api.pagseguro.com
+    description: Testing environment with simulated payment processing
+  production:
+    base_url: https://api.pagseguro.com
+    description: Live production environment
+
+error_codes:
+  - code: 400
+    meaning: Bad Request - invalid request parameters
+  - code: 401
+    meaning: Unauthorized - invalid or missing authentication token
+  - code: 404
+    meaning: Not Found - resource does not exist
+  - code: 409
+    meaning: Conflict - duplicate request detected via idempotency key
+  - code: 422
+    meaning: Unprocessable Entity - business rule violation
+  - code: 429
+    meaning: Too Many Requests - rate limit exceeded
+  - code: 500
+    meaning: Internal Server Error - PagBank server error
+
+notes:
+  - Contact PagBank commercial team for specific production rate limit quotas
+  - High-volume integrations should discuss dedicated capacity with the PagBank team

@@ -1,0 +1,45 @@
+name: PagBank API FinOps
+description: Financial operations considerations for integrating with PagBank APIs. PagBank uses a per-transaction pricing model typical of Brazilian payment processors. Costs are driven by transaction volume, payment method mix, and integration type.
+url: https://pagbank.com.br/
+
+cost_model:
+  type: per-transaction
+  description: PagBank charges fees per payment processed. Rates vary by payment method, card brand, installment plan, and merchant category. No monthly API subscription fees are publicly listed.
+
+payment_method_cost_drivers:
+  - method: Credit Card (Cartão de Crédito)
+    notes: Fees vary by card brand (Visa, Mastercard, Elo, Hipercard, Amex) and number of installments. Higher installment counts typically incur higher merchant discount rates (MDR).
+  - method: Debit Card (Débito 3DS)
+    notes: Generally lower MDR than credit card. Requires 3DS authentication flow.
+  - method: PIX
+    notes: Low-cost instant payment method. PagBank charges a small per-transaction fee for PIX. Real-time settlement reduces receivables financing needs.
+  - method: Boleto Bancário
+    notes: Fixed fee per boleto issued. Additional considerations for unpaid boletos.
+  - method: Recurring Payments
+    notes: Subscription billing uses same underlying payment methods; per-transaction fees apply to each charge cycle.
+
+cost_optimization:
+  - Prefer PIX for low-value transactions to minimize MDR costs
+  - Use card tokenization to reduce failed recurring payments and associated retry costs
+  - Implement webhook notifications to process payment confirmations asynchronously and avoid polling API calls
+  - Use idempotency keys to prevent duplicate charge creation and associated refund costs
+  - Leverage EDI reconciliation files for bulk transaction processing instead of individual API queries
+  - Test thoroughly in sandbox to avoid failed production transactions
+
+settlement:
+  - PIX payments settle in real time (seconds)
+  - Credit card settlements follow standard acquiring settlement cycles
+  - Boleto payments settle after confirmation of bank payment
+
+receivables:
+  - PagBank offers receivables anticipation (antecipação de recebíveis) for credit card transactions
+  - Anticipation fees apply when accessing funds before the standard settlement date
+
+monitoring:
+  - Use the PagBank Status Page (https://status.pagbank.com.br/) to monitor API uptime before attributing costs to failed transactions
+  - Track transaction success rates by payment method to identify cost-inefficient failure patterns
+
+notes:
+  - Transaction fee schedules are negotiated during commercial onboarding
+  - Platform integrations (Connect API / marketplace model) may have split fee arrangements
+  - Physical commerce POS integrations (Moderninha terminals) have separate hardware leasing or purchase costs

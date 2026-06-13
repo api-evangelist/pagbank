@@ -1,0 +1,35 @@
+name: PagBank Plans and Pricing
+description: PagBank does not publish fixed-price API subscription tiers. Access to the payment APIs is granted after account approval and a mandatory homologation process. Transaction fees apply per payment method processed.
+url: https://pagbank.com.br/
+plans:
+  - name: Sandbox (Development)
+    description: Free testing environment available to all registered developers. Provides access to all API endpoints with test credentials, simulated payment methods, and test card numbers.
+    price: 0
+    unit: free
+    features:
+      - Full API access in sandbox environment
+      - Test card numbers and simulators
+      - Webhook testing
+      - No transaction limits in testing
+
+  - name: Production (Per-Transaction)
+    description: Production access is enabled after completing account registration and the mandatory homologation review (approximately 4 business days). Fees are charged per transaction processed.
+    price: variable
+    unit: per-transaction
+    features:
+      - Credit card processing (Visa, Mastercard, Elo, Hipercard, Amex)
+      - Debit card with 3DS authentication
+      - PIX instant payments
+      - Boleto bancario
+      - Recurring payments / subscriptions
+      - Payment splitting
+      - Hosted Checkout PagBank
+      - Card tokenization
+      - Webhook notifications
+      - EDI reconciliation reports
+      - Connect API for platform integrations
+
+notes:
+  - Pricing details and transaction fee schedules are provided during the commercial onboarding process
+  - Platform integrations (SaaS/Marketplace models) use the Connect API and may have separate commercial agreements
+  - Physical commerce (POS terminal) integrations have separate hardware and service pricing
