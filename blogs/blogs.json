@@ -1,7 +1,7 @@
 {
   "provider": "pagbank",
   "url": "https://developer.pagbank.com.br/changelog",
-  "fetched": "2026-06-13",
+  "fetched": "2026-06-14T20:42:17Z",
   "entries": [
     {
       "title": "Chegou o Portal do Desenvolvedor!",
@@ -27,5 +27,16 @@
       "url": "https://developer.pagbank.com.br/changelog/status-page",
       "summary": "Introduction of a dedicated Status Page where users can monitor PagBank service availability and incident history in real time."
     }
-  ]
+  ],
+  "repo": "pagbank",
+  "feeds": [
+    {
+      "source": "https://github.com/pagseguro/",
+      "feed_url": "https://github.com/pagseguro/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0
 }
