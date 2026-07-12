@@ -89,6 +89,8 @@ apis:
       - type: Documentation
         url: https://developer.pagbank.com.br/docs/apis-pagbank
 common:
+  - type: DomainSecurity
+    url: security/pagbank-domain-security.yml
   - type: Website
     url: https://pagbank.com.br/
   - type: Documentation
