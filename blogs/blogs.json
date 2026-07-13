@@ -2,13 +2,14 @@
   "repo": "pagbank",
   "feeds": [
     {
-      "source": "https://developer.pagbank.com.br/changelog",
-      "feed_url": "",
+      "source": "https://github.com/pagseguro/",
+      "feed_url": "https://github.com/pagseguro/",
+      "title": "",
       "saved": 0,
-      "method": "agent-scrape"
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T12:59:43Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0,
   "agent_pulled": "2026-06-27"
 }
