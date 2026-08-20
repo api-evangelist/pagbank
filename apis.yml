@@ -22,6 +22,16 @@ tags:
   - Payments
   - Digital Banking
   - Brazil
+  - Pix
+  - Fintech
+  - E-Commerce
+  - Point-of-Sale
+  - Recurring Payments
+  - Boleto
+tags_raw:
+  - Payments
+  - Digital Banking
+  - Brazil
   - PIX
   - Fintech
   - E-Commerce
@@ -34,6 +44,12 @@ apis:
     humanURL: https://developer.pagbank.com.br/reference/introducao
     baseURL: https://api.pagseguro.com
     tags:
+      - Order
+      - Payments
+      - Credit Card
+      - Pix
+      - Boleto
+    tags_raw:
       - Orders
       - Payments
       - Credit Card
@@ -49,6 +65,10 @@ apis:
     humanURL: https://developer.pagbank.com.br/reference/introducao
     baseURL: https://api.pagseguro.com
     tags:
+      - Pix
+      - Instant Payments
+      - QR Code
+    tags_raw:
       - PIX
       - Instant Payments
       - QR Code
@@ -60,6 +80,11 @@ apis:
     humanURL: https://developer.pagbank.com.br/docs/apis-pagbank
     baseURL: https://api.pagseguro.com
     tags:
+      - Authentication
+      - Platform
+      - Marketplace
+      - Authorization
+    tags_raw:
       - OAuth
       - Platform
       - Marketplace
@@ -72,6 +97,10 @@ apis:
     humanURL: https://developer.pagbank.com.br/docs/apis-pagbank
     baseURL: https://api.pagseguro.com
     tags:
+      - Recurring Payments
+      - Subscription
+      - Billing
+    tags_raw:
       - Recurring Payments
       - Subscriptions
       - Billing
