@@ -33,10 +33,10 @@ tags:
   - Payments
   - Digital Banking
   - Brazil
-  - PIX
+  - Pix
   - Fintech
   - E-Commerce
-  - POS
+  - Point-of-Sale
   - Recurring Payments
   - Boleto
 tags_raw:
@@ -58,7 +58,7 @@ apis:
       - Order
       - Payments
       - Credit Card
-      - PIX
+      - Pix
       - Boleto
     tags_raw:
       - Orders
@@ -76,7 +76,7 @@ apis:
     humanURL: https://developer.pagbank.com.br/reference/introducao
     baseURL: https://api.pagseguro.com
     tags:
-      - PIX
+      - Pix
       - Instant Payments
       - QR Code
     tags_raw:
