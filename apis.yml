@@ -57,7 +57,7 @@ apis:
     tags:
       - Order
       - Payments
-      - Credit Card
+      - Credit Cards
       - Pix
       - Boleto
     tags_raw:
@@ -78,7 +78,7 @@ apis:
     tags:
       - Pix
       - Instant Payments
-      - QR Code
+      - QR Codes
     tags_raw:
       - PIX
       - Instant Payments
