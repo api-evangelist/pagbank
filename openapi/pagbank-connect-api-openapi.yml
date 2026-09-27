@@ -1,0 +1,110 @@
+openapi: 3.2.0
+info:
+  title: PagBank / PagSeguro REST Connect API
+  description: 'PagBank (PagSeguro) REST API surface covering Orders, Charges, Public
+
+    Keys, Checkout, Recurring (plans / subscribers / subscriptions / coupons
+
+    / invoices), and Connect / OAuth. All requests authenticate with a Bearer
+
+    access token over HTTPS; responses are JSON.
+
+
+    Base URLs:
+
+    - Production: https://api.pagseguro.com
+
+    - Sandbox: https://sandbox.api.pagseguro.com'
+  version: v1
+  contact:
+    name: PagBank Developers
+    url: https://developer.pagbank.com.br/
+servers:
+- url: https://api.pagseguro.com
+  description: PagBank production API
+- url: https://sandbox.api.pagseguro.com
+  description: PagBank sandbox API
+security:
+- bearerAuth: []
+tags:
+- name: Connect
+paths:
+  /applications:
+    post:
+      tags:
+      - Connect
+      summary: Create a Connect Application
+      responses:
+        '201':
+          description: Application created
+      operationId: postApplications
+      x-operation-id-source: derived
+  /applications/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Connect
+      summary: Get a Connect Application
+      responses:
+        '200':
+          description: Application
+      operationId: getApplicationsById
+      x-operation-id-source: derived
+  /authorization:
+    get:
+      tags:
+      - Connect
+      summary: Request Authorization (Connect)
+      responses:
+        '200':
+          description: Authorization URL / status
+      operationId: getAuthorization
+      x-operation-id-source: derived
+  /tokens:
+    post:
+      tags:
+      - Connect
+      summary: Issue an Access Token
+      responses:
+        '201':
+          description: Token issued
+      operationId: postTokens
+      x-operation-id-source: derived
+  /tokens/refresh:
+    post:
+      tags:
+      - Connect
+      summary: Refresh an Access Token
+      responses:
+        '200':
+          description: Token refreshed
+      operationId: postTokensRefresh
+      x-operation-id-source: derived
+  /tokens/revoke:
+    post:
+      tags:
+      - Connect
+      summary: Revoke an Access Token
+      responses:
+        '200':
+          description: Token revoked
+      operationId: postTokensRevoke
+      x-operation-id-source: derived
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: access_token
+      description: 'PagBank access token issued via the developer portal (or via the
+
+        Connect flow). Send as "Authorization: Bearer {ACCESS_TOKEN}". All
+
+        requests must be HTTPS.
+
+        '

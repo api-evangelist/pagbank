@@ -50,96 +50,293 @@ tags_raw:
   - Recurring Payments
   - Boleto
 apis:
-  - name: PagBank Orders API
-    description: Manages purchase orders and payment processing across multiple payment methods including credit card, debit 3DS, boleto, and PIX. Supports post-authorization capture, card tokenization, payment splitting, cancellations, and refunds.
-    humanURL: https://developer.pagbank.com.br/reference/introducao
-    baseURL: https://api.pagseguro.com
-    tags:
-      - Order
-      - Payments
-      - Credit Cards
-      - Pix
-      - Boleto
-    tags_raw:
-      - Orders
-      - Payments
-      - Credit Card
-      - PIX
-      - Boleto
-    properties:
-      - type: Documentation
-        url: https://developer.pagbank.com.br/docs/apis-pagbank
-      - type: OpenAPI
-        url: https://developer.pagbank.com.br/reference/introducao
-  - name: PagBank PIX API
-    description: Dedicated API for PIX instant payment infrastructure in Brazil. Supports immediate charge creation via QR codes, payment receipt confirmation, and real-time notifications for PIX transactions.
-    humanURL: https://developer.pagbank.com.br/reference/introducao
-    baseURL: https://api.pagseguro.com
-    tags:
-      - Pix
-      - Instant Payments
-      - QR Codes
-    tags_raw:
-      - PIX
-      - Instant Payments
-      - QR Code
-    properties:
-      - type: Documentation
-        url: https://developer.pagbank.com.br/docs/apis-pagbank
-  - name: PagBank Connect API
-    description: OAuth 2.0 authorization API enabling platform integrations (SaaS and marketplace models) to connect applications with third-party PagBank user accounts for delegated payment processing actions.
-    humanURL: https://developer.pagbank.com.br/docs/apis-pagbank
-    baseURL: https://api.pagseguro.com
-    tags:
-      - Authentication
-      - Platform
-      - Marketplace
-      - Authorization
-    tags_raw:
-      - OAuth
-      - Platform
-      - Marketplace
-      - Authorization
-    properties:
-      - type: Documentation
-        url: https://developer.pagbank.com.br/docs/apis-pagbank
-  - name: PagBank Recurring Payments API
-    description: Subscription billing API for managing recurring charges. Handles subscription creation, billing cycles, payment method updates, and recurring payment indicators for installment plans.
-    humanURL: https://developer.pagbank.com.br/docs/apis-pagbank
-    baseURL: https://api.pagseguro.com
-    tags:
-      - Recurring Payments
-      - Subscription
-      - Billing
-    tags_raw:
-      - Recurring Payments
-      - Subscriptions
-      - Billing
-    properties:
-      - type: Documentation
-        url: https://developer.pagbank.com.br/docs/apis-pagbank
-  - name: PagBank Checkout API
-    description: Hosted checkout solution that redirects customers to a PagBank-managed payment page. Simplifies PCI compliance for merchants by offloading card data handling to PagBank infrastructure.
-    humanURL: https://developer.pagbank.com.br/docs/checkout
-    baseURL: https://api.pagseguro.com
-    tags:
-      - Checkout
-      - Hosted Payment
-      - E-Commerce
-    properties:
-      - type: Documentation
-        url: https://developer.pagbank.com.br/docs/checkout
-  - name: PagBank Account Registration API
-    description: Enables platform partners to create and manage third-party PagBank accounts programmatically. Used by marketplace and SaaS platforms to onboard sellers and sub-merchants.
-    humanURL: https://developer.pagbank.com.br/docs/apis-pagbank
-    baseURL: https://api.pagseguro.com
-    tags:
-      - Account Management
-      - Registration
-      - Onboarding
-    properties:
-      - type: Documentation
-        url: https://developer.pagbank.com.br/docs/apis-pagbank
+- name: PagBank PIX API
+  description: >-
+    Dedicated API for PIX instant payment infrastructure in Brazil. Supports immediate charge creation
+    via QR codes, payment receipt confirmation, and real-time notifications for PIX transactions.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Pix
+  - Instant Payments
+  - QR Codes
+  tags_raw:
+  - PIX
+  - Instant Payments
+  - QR Code
+  properties:
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+- name: PagBank Recurring Payments API
+  description: >-
+    Subscription billing API for managing recurring charges. Handles subscription creation, billing cycles,
+    payment method updates, and recurring payment indicators for installment plans.
+  humanURL: https://developer.pagbank.com.br/docs/apis-pagbank
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Recurring Payments
+  - Subscription
+  - Billing
+  tags_raw:
+  - Recurring Payments
+  - Subscriptions
+  - Billing
+  properties:
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+- aid: pagbank:boleto
+  name: PagBank Boleto API
+  description: >-
+    Boleto Bancário issuance and collection. Generates a printable / scannable boleto tied to an Order,
+    with status callbacks once the buyer pays at a bank, lottery house, or via internet banking.
+  humanURL: https://developer.pagbank.com.br/reference/criar-pedido-com-boleto
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Boleto
+  - Brazil
+  - Collection
+  tags_raw:
+  - Boleto
+  - Brazil
+  - Collections
+  properties:
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+- aid: pagbank:split
+  name: PagBank Marketplace / Split API
+  description: >-
+    Payment-division (split) settlement for marketplaces and platforms. Splits a single charge across
+    multiple receivers (with optional custody / release control) so each seller is settled directly by
+    PagBank.
+  humanURL: https://developer.pagbank.com.br/reference/criar-pedido-com-split
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Marketplace
+  - Split
+  - Settlement
+  properties:
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+- aid: pagbank:edi
+  name: PagBank EDI API
+  description: >-
+    Electronic Data Interchange surface for downloading transaction and settlement statements for reconciliation
+    — a structured replacement for manual CSV/PDF statement processing.
+  humanURL: https://developer.pagbank.com.br/docs/edi
+  baseURL: https://api.pagseguro.com
+  tags:
+  - EDI
+  - Reconciliation
+  - Statements
+  properties:
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+- aid: pagbank:certificates
+  name: PagBank Digital Certificate (mTLS) API
+  description: >-
+    Issues digital certificates for mTLS authentication, layered on top of bearer-token auth for higher-trust
+    integrations and sensitive payouts / Pix Bacen flows.
+  humanURL: https://developer.pagbank.com.br/docs/certificado-digital
+  baseURL: https://api.pagseguro.com
+  tags:
+  - mTLS
+  - Security
+  - Certificates
+  properties:
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+- aid: pagbank:pagbank-accounts-api
+  name: PagBank Accounts API
+  description: The Accounts API from PagBank — 2 operation(s) for accounts.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-charges-api
+  name: PagBank Charges API
+  description: The Charges API from PagBank — 4 operation(s) for charges.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Charges
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-charges-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-checkout-api
+  name: PagBank Checkout API
+  description: The Checkout API from PagBank — 4 operation(s) for checkout.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Checkout
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-checkout-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-connect-api
+  name: PagBank Connect API
+  description: The Connect API from PagBank — 6 operation(s) for connect.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Connect
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-connect-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-coupons-api
+  name: PagBank Coupons API
+  description: The Coupons API from PagBank — 2 operation(s) for coupons.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Coupons
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-coupons-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-invoices-api
+  name: PagBank Invoices API
+  description: The Invoices API from PagBank — 2 operation(s) for invoices.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Invoices
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-invoices-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-orders-api
+  name: PagBank Orders API
+  description: The Orders API from PagBank — 2 operation(s) for orders.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-plans-api
+  name: PagBank Plans API
+  description: The Plans API from PagBank — 4 operation(s) for plans.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Plans
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-plans-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-public-keys-api
+  name: PagBank Public Keys API
+  description: The Public Keys API from PagBank — 2 operation(s) for public keys.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Public Keys
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-public-keys-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-refunds-api
+  name: PagBank Refunds API
+  description: The Refunds API from PagBank — 2 operation(s) for refunds.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Refunds
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-refunds-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-subscribers-api
+  name: PagBank Subscribers API
+  description: The Subscribers API from PagBank — 3 operation(s) for subscribers.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Subscribers
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-subscribers-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
+- aid: pagbank:pagbank-subscriptions-api
+  name: PagBank Subscriptions API
+  description: The Subscriptions API from PagBank — 5 operation(s) for subscriptions.
+  humanURL: https://developer.pagbank.com.br/reference/introducao
+  baseURL: https://api.pagseguro.com
+  tags:
+  - Subscriptions
+  properties:
+  - type: OpenAPI
+    url: openapi/pagbank-subscriptions-api-openapi.yml
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/apis-pagbank
+  - type: APIReference
+    url: https://developer.pagbank.com.br/reference/introducao
+  - type: Documentation
+    url: https://developer.pagbank.com.br/docs/checkout
 common:
   - type: DomainSecurity
     url: security/pagbank-domain-security.yml

@@ -1,0 +1,136 @@
+openapi: 3.2.0
+info:
+  title: PagBank / PagSeguro REST Subscriptions API
+  description: 'PagBank (PagSeguro) REST API surface covering Orders, Charges, Public
+
+    Keys, Checkout, Recurring (plans / subscribers / subscriptions / coupons
+
+    / invoices), and Connect / OAuth. All requests authenticate with a Bearer
+
+    access token over HTTPS; responses are JSON.
+
+
+    Base URLs:
+
+    - Production: https://api.pagseguro.com
+
+    - Sandbox: https://sandbox.api.pagseguro.com'
+  version: v1
+  contact:
+    name: PagBank Developers
+    url: https://developer.pagbank.com.br/
+servers:
+- url: https://api.pagseguro.com
+  description: PagBank production API
+- url: https://sandbox.api.pagseguro.com
+  description: PagBank sandbox API
+security:
+- bearerAuth: []
+tags:
+- name: Subscriptions
+paths:
+  /subscriptions:
+    post:
+      tags:
+      - Subscriptions
+      summary: Create a Subscription
+      responses:
+        '201':
+          description: Subscription created
+      operationId: postSubscriptions
+      x-operation-id-source: derived
+    get:
+      tags:
+      - Subscriptions
+      summary: List Subscriptions
+      responses:
+        '200':
+          description: Subscriptions list
+      operationId: getSubscriptions
+      x-operation-id-source: derived
+  /subscriptions/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Subscriptions
+      summary: Get a Subscription
+      responses:
+        '200':
+          description: Subscription
+      operationId: getSubscriptionsById
+      x-operation-id-source: derived
+    put:
+      tags:
+      - Subscriptions
+      summary: Update a Subscription
+      responses:
+        '200':
+          description: Subscription updated
+      operationId: putSubscriptionsById
+      x-operation-id-source: derived
+  /subscriptions/{id}/cancel:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    put:
+      tags:
+      - Subscriptions
+      summary: Cancel a Subscription
+      responses:
+        '200':
+          description: Subscription cancelled
+      operationId: putSubscriptionsByIdCancel
+      x-operation-id-source: derived
+  /subscriptions/{id}/suspend:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    put:
+      tags:
+      - Subscriptions
+      summary: Suspend a Subscription
+      responses:
+        '200':
+          description: Subscription suspended
+      operationId: putSubscriptionsByIdSuspend
+      x-operation-id-source: derived
+  /subscriptions/{id}/activate:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    put:
+      tags:
+      - Subscriptions
+      summary: Activate a Subscription
+      responses:
+        '200':
+          description: Subscription activated
+      operationId: putSubscriptionsByIdActivate
+      x-operation-id-source: derived
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: access_token
+      description: 'PagBank access token issued via the developer portal (or via the
+
+        Connect flow). Send as "Authorization: Bearer {ACCESS_TOKEN}". All
+
+        requests must be HTTPS.
+
+        '

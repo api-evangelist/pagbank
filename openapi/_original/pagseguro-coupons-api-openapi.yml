@@ -1,0 +1,81 @@
+# x-archived-from: pagseguro-coupons-api-openapi.yml
+# x-archived-on: 2026-09-26
+openapi: 3.2.0
+info:
+  title: PagBank / PagSeguro REST Coupons API
+  description: 'PagBank (PagSeguro) REST API surface covering Orders, Charges, Public
+
+    Keys, Checkout, Recurring (plans / subscribers / subscriptions / coupons
+
+    / invoices), and Connect / OAuth. All requests authenticate with a Bearer
+
+    access token over HTTPS; responses are JSON.
+
+
+    Base URLs:
+
+    - Production: https://api.pagseguro.com
+
+    - Sandbox: https://sandbox.api.pagseguro.com'
+  version: v1
+  contact:
+    name: PagBank Developers
+    url: https://developer.pagbank.com.br/
+servers:
+- url: https://api.pagseguro.com
+  description: PagBank production API
+- url: https://sandbox.api.pagseguro.com
+  description: PagBank sandbox API
+security:
+- bearerAuth: []
+tags:
+- name: Coupons
+paths:
+  /coupons:
+    post:
+      tags:
+      - Coupons
+      summary: Create a Coupon
+      responses:
+        '201':
+          description: Coupon created
+      operationId: postCoupons
+      x-operation-id-source: derived
+    get:
+      tags:
+      - Coupons
+      summary: List Coupons
+      responses:
+        '200':
+          description: Coupons list
+      operationId: getCoupons
+      x-operation-id-source: derived
+  /coupons/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Coupons
+      summary: Get a Coupon
+      responses:
+        '200':
+          description: Coupon
+      operationId: getCouponsById
+      x-operation-id-source: derived
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: access_token
+      description: 'PagBank access token issued via the developer portal (or via the
+
+        Connect flow). Send as "Authorization: Bearer {ACCESS_TOKEN}". All
+
+        requests must be HTTPS.
+
+        '

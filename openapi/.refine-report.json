@@ -1,0 +1,51 @@
+{
+  "provider": "pagbank",
+  "sources": [
+    "pagseguro-accounts-api-openapi.yml",
+    "pagseguro-charges-api-openapi.yml",
+    "pagseguro-checkout-api-openapi.yml",
+    "pagseguro-connect-api-openapi.yml",
+    "pagseguro-coupons-api-openapi.yml",
+    "pagseguro-invoices-api-openapi.yml",
+    "pagseguro-orders-api-openapi.yml",
+    "pagseguro-plans-api-openapi.yml",
+    "pagseguro-public-keys-api-openapi.yml",
+    "pagseguro-refunds-api-openapi.yml",
+    "pagseguro-subscribers-api-openapi.yml",
+    "pagseguro-subscriptions-api-openapi.yml"
+  ],
+  "outputs": [
+    "pagbank-accounts-api-openapi.yml",
+    "pagbank-charges-api-openapi.yml",
+    "pagbank-checkout-api-openapi.yml",
+    "pagbank-connect-api-openapi.yml",
+    "pagbank-coupons-api-openapi.yml",
+    "pagbank-invoices-api-openapi.yml",
+    "pagbank-orders-api-openapi.yml",
+    "pagbank-plans-api-openapi.yml",
+    "pagbank-public-keys-api-openapi.yml",
+    "pagbank-refunds-api-openapi.yml",
+    "pagbank-subscribers-api-openapi.yml",
+    "pagbank-subscriptions-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/pagseguro-accounts-api-openapi.yml",
+    "archived openapi/pagseguro-charges-api-openapi.yml",
+    "archived openapi/pagseguro-checkout-api-openapi.yml",
+    "archived openapi/pagseguro-connect-api-openapi.yml",
+    "archived openapi/pagseguro-coupons-api-openapi.yml",
+    "archived openapi/pagseguro-invoices-api-openapi.yml",
+    "archived openapi/pagseguro-orders-api-openapi.yml",
+    "archived openapi/pagseguro-plans-api-openapi.yml",
+    "archived openapi/pagseguro-public-keys-api-openapi.yml",
+    "archived openapi/pagseguro-refunds-api-openapi.yml",
+    "archived openapi/pagseguro-subscribers-api-openapi.yml",
+    "archived openapi/pagseguro-subscriptions-api-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "apis.yml register: written (+12 apis, 18 total)"
+  ],
+  "skipped": []
+}

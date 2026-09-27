@@ -1,0 +1,70 @@
+openapi: 3.2.0
+info:
+  title: PagBank / PagSeguro REST Public Keys API
+  description: 'PagBank (PagSeguro) REST API surface covering Orders, Charges, Public
+
+    Keys, Checkout, Recurring (plans / subscribers / subscriptions / coupons
+
+    / invoices), and Connect / OAuth. All requests authenticate with a Bearer
+
+    access token over HTTPS; responses are JSON.
+
+
+    Base URLs:
+
+    - Production: https://api.pagseguro.com
+
+    - Sandbox: https://sandbox.api.pagseguro.com'
+  version: v1
+  contact:
+    name: PagBank Developers
+    url: https://developer.pagbank.com.br/
+servers:
+- url: https://api.pagseguro.com
+  description: PagBank production API
+- url: https://sandbox.api.pagseguro.com
+  description: PagBank sandbox API
+security:
+- bearerAuth: []
+tags:
+- name: Public Keys
+paths:
+  /public-keys:
+    post:
+      tags:
+      - Public Keys
+      summary: Create a Public Key
+      responses:
+        '201':
+          description: Public key created
+      operationId: postPublicKeys
+      x-operation-id-source: derived
+  /public-keys/{id}:
+    parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Public Keys
+      summary: Get a Public Key
+      responses:
+        '200':
+          description: Public key
+      operationId: getPublicKeysById
+      x-operation-id-source: derived
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: access_token
+      description: 'PagBank access token issued via the developer portal (or via the
+
+        Connect flow). Send as "Authorization: Bearer {ACCESS_TOKEN}". All
+
+        requests must be HTTPS.
+
+        '
