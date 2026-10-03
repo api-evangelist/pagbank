@@ -1,18 +1,18 @@
 {
   "provider": "pagbank",
   "sources": [
-    "pagseguro-accounts-api-openapi.yml",
-    "pagseguro-charges-api-openapi.yml",
-    "pagseguro-checkout-api-openapi.yml",
-    "pagseguro-connect-api-openapi.yml",
-    "pagseguro-coupons-api-openapi.yml",
-    "pagseguro-invoices-api-openapi.yml",
-    "pagseguro-orders-api-openapi.yml",
-    "pagseguro-plans-api-openapi.yml",
-    "pagseguro-public-keys-api-openapi.yml",
-    "pagseguro-refunds-api-openapi.yml",
-    "pagseguro-subscribers-api-openapi.yml",
-    "pagseguro-subscriptions-api-openapi.yml"
+    "_original/pagseguro-accounts-api-openapi.yml",
+    "_original/pagseguro-charges-api-openapi.yml",
+    "_original/pagseguro-checkout-api-openapi.yml",
+    "_original/pagseguro-connect-api-openapi.yml",
+    "_original/pagseguro-coupons-api-openapi.yml",
+    "_original/pagseguro-invoices-api-openapi.yml",
+    "_original/pagseguro-orders-api-openapi.yml",
+    "_original/pagseguro-plans-api-openapi.yml",
+    "_original/pagseguro-public-keys-api-openapi.yml",
+    "_original/pagseguro-refunds-api-openapi.yml",
+    "_original/pagseguro-subscribers-api-openapi.yml",
+    "_original/pagseguro-subscriptions-api-openapi.yml"
   ],
   "outputs": [
     "pagbank-accounts-api-openapi.yml",
@@ -28,24 +28,25 @@
     "pagbank-subscribers-api-openapi.yml",
     "pagbank-subscriptions-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi/pagseguro-accounts-api-openapi.yml",
-    "archived openapi/pagseguro-charges-api-openapi.yml",
-    "archived openapi/pagseguro-checkout-api-openapi.yml",
-    "archived openapi/pagseguro-connect-api-openapi.yml",
-    "archived openapi/pagseguro-coupons-api-openapi.yml",
-    "archived openapi/pagseguro-invoices-api-openapi.yml",
-    "archived openapi/pagseguro-orders-api-openapi.yml",
-    "archived openapi/pagseguro-plans-api-openapi.yml",
-    "archived openapi/pagseguro-public-keys-api-openapi.yml",
-    "archived openapi/pagseguro-refunds-api-openapi.yml",
-    "archived openapi/pagseguro-subscribers-api-openapi.yml",
-    "archived openapi/pagseguro-subscriptions-api-openapi.yml"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
-    "apis.yml register: written (+12 apis, 18 total)"
+    "sourced from openapi/_original/ (12 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "pagbank-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-charges-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-checkout-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-connect-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-coupons-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-invoices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-orders-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-plans-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-public-keys-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-refunds-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-subscribers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "pagbank-subscriptions-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
