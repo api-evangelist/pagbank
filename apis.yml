@@ -151,6 +151,8 @@ apis:
   humanURL: https://developer.pagbank.com.br/reference/introducao
   baseURL: https://api.pagseguro.com
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -247,6 +249,8 @@ apis:
   humanURL: https://developer.pagbank.com.br/reference/introducao
   baseURL: https://api.pagseguro.com
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
@@ -279,6 +283,8 @@ apis:
   humanURL: https://developer.pagbank.com.br/reference/introducao
   baseURL: https://api.pagseguro.com
   tags:
+  - PublicKeys
+  tags_raw:
   - Public Keys
   properties:
   - type: OpenAPI
@@ -327,6 +333,8 @@ apis:
   humanURL: https://developer.pagbank.com.br/reference/introducao
   baseURL: https://api.pagseguro.com
   tags:
+  - Subscription
+  tags_raw:
   - Subscriptions
   properties:
   - type: OpenAPI
@@ -338,6 +346,9 @@ apis:
   - type: Documentation
     url: https://developer.pagbank.com.br/docs/checkout
 common:
+  - type: CapabilityMap
+    url: capabilities/pagbank-capability-edges.yml
+    name: PagBank Business Capability Map
   - type: DomainSecurity
     url: security/pagbank-domain-security.yml
   - type: Website
