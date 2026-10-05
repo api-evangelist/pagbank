@@ -1,0 +1,46 @@
+slug: pagbank
+provider: PagBank
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Subscriptions
+  spec_file: pagbank-subscriptions-api-openapi.yml
+  capability_id: BC-4240
+  capability_id_l1: BC-4240
+  capability_name: Subscription Lifecycle Management
+  confidence: 0.8
+  evidence: PUT /subscriptions/{id}/cancel  Cancel a Subscription; PUT /subscriptions/{id}/suspend  Suspend
+    a Subscription; PUT /subscriptions/{id}/activate  Activate a Subscription
+  reason: Create/activate/suspend/cancel of recurring subscriptions is plainly subscription lifecycle
+    management; the surface spans provisioning, modification and cancellation so no single L2 is named.
+- tag: Invoices
+  spec_file: pagbank-invoices-api-openapi.yml
+  capability_id: BC-4250.30
+  capability_id_l1: BC-4250
+  capability_name: Invoicing & Statement Management
+  confidence: 0.75
+  evidence: GET /subscriptions/{id}/invoices  List Invoices for a Subscription
+  reason: Invoices are retrieved in the context of recurring subscriptions, matching Invoicing & Statement
+    Management within subscription billing. Read-only surface, so some residual ambiguity versus general
+    accounts-receivable invoicing.
+- tag: Connect
+  spec_file: pagbank-connect-api-openapi.yml
+  capability_id: BC-4270.40
+  capability_id_l1: BC-4270
+  capability_name: Developer Identity & Credential Management
+  confidence: 0.72
+  evidence: POST /applications  Create a Connect Application; POST /tokens  Issue an Access Token; POST
+    /tokens/revoke
+  reason: Registration of third-party Connect applications plus OAuth token issue/refresh/revoke is issuance
+    and stewardship of developer credentials and OAuth clients — Developer Identity & Credential Management.
+    Some chance the intended reading is generic IAM plumbing, hence not higher.
