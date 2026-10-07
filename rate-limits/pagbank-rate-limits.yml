@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: PagBank API Rate Limits
 description: PagBank does not publicly document specific numeric rate limits in its developer documentation. The platform uses token-based authentication with idempotency keys to prevent duplicate request processing. Rate limiting details are communicated during the commercial onboarding and homologation process.
 url: https://developer.pagbank.com.br/
