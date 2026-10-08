@@ -37,3 +37,26 @@ notes:
   - Pricing details and transaction fee schedules are provided during the commercial onboarding process
   - Platform integrations (SaaS/Marketplace models) use the Connect API and may have separate commercial agreements
   - Physical commerce (POS terminal) integrations have separate hardware and service pricing
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - metered
+  units:
+  - transaction
+  plans:
+  - name: Sandbox (Development)
+    access: other
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods: []
+  - name: Production (Per-Transaction)
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - transaction
+    periods: []
