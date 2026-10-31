@@ -64,12 +64,124 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PagBank (formerly PagSeguro) is a Brazilian digital bank and payment platform operated by PagoSeguro Internet Instituição de Pagamento S/A, a subsidiary of Universo Online (UOL). It provides REST APIs for Pix instant transfers, credit and debit card processing, e-commerce checkout, boleto bancário, recurring payments, POS terminal integration, and financial account management.
+PagBank (formerly PagSeguro) is a Brazilian digital bank and payment platform operated by PagoSeguro Internet Instituição de Pagamento S/A, a subsidiary of Universo Online (UOL). It provides REST APIs for Pix instant transfers, credit and debit card processing, e-commerce checkout, boleto bancário, recurring payments, POS terminal integration, and financial account management. PagBank serves e-commerce merchants, SaaS platforms, and marketplaces across Brazil and supports over 29.5 million customers.
 
-**Developer Portal:** https://developer.pagbank.com.br/
+**Areas:** Payments · Digital Banking · Brazil · Pix · Fintech · E-Commerce · Point-of-Sale · Recurring Payments · Boleto
 
-**API Reference:** https://developer.pagbank.com.br/reference/introducao
+## PagBank on APIs.io
 
-**GitHub:** https://github.com/pagseguro/
+Everything profiled for PagBank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pagbank/](https://apis.io/providers/pagbank/)** — or go straight to one of the APIs or properties below.
 
-**Status:** https://status.pagbank.com.br/
+### APIs (18)
+
+- [PagBank PIX API](https://apis.io/apis/pagbank/pagbank-pix-api/) — Dedicated API for PIX instant payment infrastructure in Brazil. Supports immediate charge creation via QR codes, payment receipt confirmation, and real-time…
+- [PagBank Recurring Payments API](https://apis.io/apis/pagbank/pagbank-recurring-payments-api/) — Subscription billing API for managing recurring charges. Handles subscription creation, billing cycles, payment method updates, and recurring payment…
+- [PagBank Boleto API](https://apis.io/apis/pagbank/boleto/) — Boleto Bancário issuance and collection. Generates a printable / scannable boleto tied to an Order, with status callbacks once the buyer pays at a bank,…
+- [PagBank Marketplace / Split API](https://apis.io/apis/pagbank/split/) — Payment-division (split) settlement for marketplaces and platforms. Splits a single charge across multiple receivers (with optional custody / release…
+- [PagBank EDI API](https://apis.io/apis/pagbank/edi/) — Electronic Data Interchange surface for downloading transaction and settlement statements for reconciliation — a structured replacement for manual CSV/PDF…
+- [PagBank Digital Certificate (mTLS) API](https://apis.io/apis/pagbank/certificates/) — Issues digital certificates for mTLS authentication, layered on top of bearer-token auth for higher-trust integrations and sensitive payouts / Pix Bacen flows.
+- [PagBank Accounts API](https://apis.io/apis/pagbank/pagbank-accounts-api/) — The Accounts API from PagBank — 2 operation(s) for accounts.
+- [PagBank Charges API](https://apis.io/apis/pagbank/pagbank-charges-api/) — The Charges API from PagBank — 4 operation(s) for charges.
+- [PagBank Checkout API](https://apis.io/apis/pagbank/pagbank-checkout-api/) — The Checkout API from PagBank — 4 operation(s) for checkout.
+- [PagBank Connect API](https://apis.io/apis/pagbank/pagbank-connect-api/) — The Connect API from PagBank — 6 operation(s) for connect.
+- [PagBank Coupons API](https://apis.io/apis/pagbank/pagbank-coupons-api/) — The Coupons API from PagBank — 2 operation(s) for coupons.
+- [PagBank Invoices API](https://apis.io/apis/pagbank/pagbank-invoices-api/) — The Invoices API from PagBank — 2 operation(s) for invoices.
+- [PagBank Orders API](https://apis.io/apis/pagbank/pagbank-orders-api/) — The Orders API from PagBank — 2 operation(s) for orders.
+- [PagBank Plans API](https://apis.io/apis/pagbank/pagbank-plans-api/) — The Plans API from PagBank — 4 operation(s) for plans.
+- [PagBank Public Keys API](https://apis.io/apis/pagbank/pagbank-public-keys-api/) — The Public Keys API from PagBank — 2 operation(s) for public keys.
+- [PagBank Refunds API](https://apis.io/apis/pagbank/pagbank-refunds-api/) — The Refunds API from PagBank — 2 operation(s) for refunds.
+- [PagBank Subscribers API](https://apis.io/apis/pagbank/pagbank-subscribers-api/) — The Subscribers API from PagBank — 3 operation(s) for subscribers.
+- [PagBank Subscriptions API](https://apis.io/apis/pagbank/pagbank-subscriptions-api/) — The Subscriptions API from PagBank — 5 operation(s) for subscriptions.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Pagbank Domain Security](https://apis.io/security/pagbank/pagbank-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Pagbank Plans Pricing](https://apis.io/plans/pagbank/pagbank-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Pagbank Rate Limits](https://apis.io/rate-limits/pagbank/pagbank-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Pagbank Finops](https://apis.io/finops/pagbank/pagbank-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://pagbank.com.br/)
+- [Documentation](https://developer.pagbank.com.br/docs/apis-pagbank)
+- [Getting started](https://developer.pagbank.com.br/docs/primeiros-passos)
+- [API reference](https://developer.pagbank.com.br/reference/introducao)
+- [Pricing](https://pagbank.com.br/)
+- [Blog](https://developer.pagbank.com.br/changelog)
+- [Status](https://status.pagbank.com.br/)
+
+## API Evangelist rating
+
+**Kin Score 26.8** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 45.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 15.8 |
+
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.4** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pagbank/](https://apis.io/providers/pagbank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PagBank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pagbank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
